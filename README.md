@@ -9,9 +9,33 @@ and give feedback to the chair for the final decision.
 
 This is the EasyRash client repo.
 
+Requirements
+-------------
+```
+angular
+gulp
+gulp-concat
+gulp-rename
+gulp-uglify
+gulp-order
+gulp-watch
+postcss-scopify
+gulp-postcss
+```
+
+You can install them easily with npm:
+
+```
+npm install angular gulp gulp-concat gulp-rename gulp-uglify gulp-order gulp-watch postcss-scopify gulp-postcss
+```
+
 Usage
 ------
 
 - Set baseUrl in js/app.js to your server url (defaults to localhost:10000)
 - Compile with Gulp
-- Serve the website with Apache/Ngnix.
+```
+make
+```
+- Serve index.html with Apache/Ngnix.
+
