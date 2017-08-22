@@ -1,0 +1,34 @@
+<md-dialog flex-gt-sm="30" flex="100">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Global valutation paper</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="rdcCtrl.closeDialog()">
+        <i class="material-icons">close</i>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content">
+      <h1>{{rdcCtrl.paper.data.title}}</h1>
+
+      <div layout="row" layout-align="space-between center">
+        <span>Evaluate paper:</span>
+        <md-select ng-model="rdcCtrl.finalDecision" placeholder="Valutation" class="md-no-underline">
+          <md-option value="rejected-for-publication">Rejected</md-option>
+          <md-option value="accepted-for-publication">Accepted</md-option>
+        </md-select>
+      </div>
+
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button ng-click="rdcCtrl.closeDialog()" md-autofocus>
+      Cancel
+    </md-button>
+    <span flex></span>
+    <md-button ng-click="rdcCtrl.saveDecision()" class="md-raised md-primary md-button md-ink-ripple">
+      Save
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

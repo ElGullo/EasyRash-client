@@ -1,0 +1,32 @@
+<md-dialog flex-gt-sm="50" flex="100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Add Reviewers</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="arcCtrl.closeDialog()">
+                <i class="material-icons">close</i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <md-content layout="row" class="md-padding">
+            <div ng-controller="UserChipsController as vm">
+                <md-chips id="AddRevChips" ng-init="vm.selectedUsers = arcCtrl.oldReviewers" ng-model="vm.selectedUsers" ng-change="{{ arcCtrl.newReviewers = vm.selectedUsers}}" md-autocomplete-snap="" md-transform-chip="vm.transformChip($chip)" md-require-match=''>
+                    <md-autocomplete md-no-cache="vm.noCache" md-selected-item='vm.selectedItem' md-search-text='vm.searchText' md-items='item in vm.querySearchDeferred(vm.searchText)' md-item-text='item.given_name' placeholder="Add a Reviewer">
+                        <span md-highlight-text='vm.searchText'>{{item.given_name}} {{item.family_name}} [ {{item.mail}} ]</span>
+                    </md-autocomplete>
+                    <md-chip-template>
+                        <span>
+                            {{$chip.given_name}}
+                            <strong>{{$chip.family_name}}</strong>
+                            <em>({{$chip.mail}})</em>
+                        <span>
+                    </md-chip-template>
+                </md-chips>
+            </div>
+            <div layout="row" layout-align="center center" class="pad2">
+                <md-button  class="md-raised md-primary" ng-click="arcCtrl.addReviewers()">Add Reviewers</md-button>
+            </div>
+        </md-content>
+    </md-dialog-content>
+</md-dialog>

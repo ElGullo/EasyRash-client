@@ -1,0 +1,14 @@
+<md-dialog flex-gt-sm="30" flex="100">
+  <md-toolbar>
+    <div class="md-toolbar-tools" layout="row" layout-align="center center">
+      <h2>Are you still there?</h2>
+    </div>
+  </md-toolbar>
+  <md-dialog-content idle-countdown="countdown">
+    <div class="md-dialog-content" class="txtcenter">
+      <p>You have been idle for 30 minutes</p>
+      <p>You have {{countdown/60 | number : 0}}:{{countdown%60}} minutes to resume your review or your unsaved work will be lost</p>
+      <md-progress-linear md-mode="determinate" ng-value="(countdown/300)*100" ></md-progress-linear>
+    </div>
+  </md-dialog-content>
+</md-dialog>

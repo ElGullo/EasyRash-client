@@ -1,0 +1,45 @@
+<md-dialog flex-gt-sm="25" flex="100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Forgot password </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="closeDialog()">
+                <i class="material-icons">close</i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+        <div class="contentpad">
+            <p>Type your e-mail:</p>
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="fpswCtrl.forgotpsw_mail" type="email">
+            </md-input-container>
+            <div ng-show="fpswCtrl.forgotpsw_view">
+                <p>Paste the token you recived from e-mail:</p>
+                <md-input-container>
+                    <label>Token</label>
+                    <input ng-model="fpswCtrl.forgotpsw_token" type="text">
+                </md-input-container>
+                <p>Type your new password</p>
+                <md-input-container>
+                    <label>Password</label>
+                    <input ng-model="fpswCtrl.forgotpsw_newpass" type="password">
+                </md-input-container>
+            </div>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button class="md-raised " ng-click="closeDialog()" md-autofocus>
+            Close
+        </md-button>
+        <span flex></span>
+        <md-button class="md-raised md-primary" ng-click="fpswCtrl.changeForgottenPsw()" ng-show="fpswCtrl.forgotpsw_view">
+            Change Password
+        </md-button>
+        <md-button class="md-raised md-primary" ng-click="fpswCtrl.getTokenRecovery()" ng-hide="fpswCtrl.forgotpsw_view">
+            Send
+        </md-button>
+
+    </md-dialog-actions>
+</md-dialog>

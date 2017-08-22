@@ -1,0 +1,20 @@
+<md-dialog flex-gt-sm="60" flex="100">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Filter Annotations</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="paperCtrl.closeDialog()">
+                <i class="material-icons">close</i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-dialog-content>
+
+        <filterannotations></filterannotations>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+        <md-button ng-click="paperCtrl.closeDialog()" md-autofocus>
+            Close
+        </md-button>
+    </md-dialog-actions>
+</md-dialog>

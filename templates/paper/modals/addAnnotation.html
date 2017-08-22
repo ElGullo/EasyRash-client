@@ -1,0 +1,31 @@
+<md-dialog flex-gt-sm="30" flex="100">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Add Annotation</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="annotationCtrl.closeDialog()">
+        <i class="material-icons">close</i>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content>
+    <div class="md-dialog-content" class="txtcenter">
+      <p><i>Selected text:</i></p>
+
+      <p>{{selectedtext}}</p>
+      <md-input-container class="md-block">
+        <label>Annotation Text</label>
+        <textarea ng-model="annotationCtrl.text_annotation" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+      </md-input-container>
+    </div>
+  </md-dialog-content>
+  <md-dialog-actions layout="row">
+    <md-button ng-click="annotationCtrl.closeDialog()" md-autofocus>
+      Cancel
+    </md-button>
+    <span flex></span>
+    <md-button ng-click="annotationCtrl.saveAnnotation()" class="md-raised md-primary md-button md-ink-ripple">
+      Save
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>
