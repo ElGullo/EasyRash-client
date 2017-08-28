@@ -9,6 +9,19 @@ and give feedback to the chair for the final decision.
 
 This is the EasyRash client repo.
 
+This project was done by as a part of the Web Technologies course (2015-2016) held by Professor Fabio Vitali at University of Bologna.
+
+License
+-------
+This software is released under the GPL v3.0 licence.
+
+Members
+----------
+ - Carlo De Pieri carlo.depieri@studio.unibo.it
+ - Alessio Koci alessio.koci@studio.unibo.it
+ - Gianmaria Pedrini [me] gianmaria.pedrini@studio.unibo.it (gianmariapedrini@gmail.com)
+ - Alessio Trivisonno  alessio.trivisonno@studio.unibo.it
+
 Requirements
 -------------
 ```
